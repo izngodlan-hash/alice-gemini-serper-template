@@ -216,7 +216,7 @@ export default async function handler(req, res) {
       false,
       oldHistory
     );
-    greeting.response.tts = 'Начинаю проверку. <speaker audio="alice-sounds-game-win-1.opus"> <speaker audio="dialogs-upload/0d2f3fc2-4275-473b-b799-798894f97c7e/c1343d60-fe1a-4486-82e0-1b3df6fe884a.opus"> Проверка завершена.';
+    greeting.response.tts = '<speaker audio="dialogs-upload/0d2f3fc2-4275-473b-b799-798894f97c7e/c1343d60-fe1a-4486-82e0-1b3df6fe884a.opus">';
     return res.status(200).json(greeting);
   }
 
