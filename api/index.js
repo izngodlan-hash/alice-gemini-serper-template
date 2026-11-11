@@ -207,7 +207,7 @@ export default async function handler(req, res) {
   const startedAt = Date.now();
   const remainingMs = () => TOTAL_RESPONSE_BUDGET_MS - (Date.now() - startedAt);
   const body = req.body && typeof req.body === "object" ? req.body : {};
-  const text = String(body?.request?.command || body?.request?.original_utterance || "").trim();
+  const text = String(body?.request?.command ?? body?.request?.original_utterance ?? "").trim();
   const oldHistory = safeHistory(body?.state?.session?.history);
 
     if (!text) {
